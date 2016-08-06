@@ -1,5 +1,3 @@
-import UIKit
-
 //step 1
 //create a single collection for all 18 players
 let soccerPlayers = [
@@ -23,13 +21,16 @@ let soccerPlayers = [
     ["Name": "Herschell Krustofski", "Height": "45", "Experience": "true", "Guardian": "Hyman and Rachel"]
 ]
 
-
+//step 2
+// create array for each team
 var teamSharks: [[String:String]] = []
 var teamDragons: [[String:String]] = []
 var teamRaptors: [[String:String]] = []
 
+//create array of all teams
 var teams = [teamSharks, teamDragons, teamRaptors]
 
+//calculate players per team
 let playersPerTeam = soccerPlayers.count / teams.count
 
 //store players
@@ -64,7 +65,7 @@ for player in soccerPlayers {
     }
 }
 
-//personalized letters
+//print personalized letters
 for player in teamSharks {
     print("Dear \(player["Guardian"]!), \(player["Name"]!) will be playing for the Sharks. Date: March 17, 3pm")
 }
